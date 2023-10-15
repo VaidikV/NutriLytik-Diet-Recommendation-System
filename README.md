@@ -1,7 +1,5 @@
 # Nutri-Lytik : Diet Recommendation System
 
-![Logo](logo.png)
-
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
