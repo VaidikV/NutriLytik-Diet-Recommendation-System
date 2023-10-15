@@ -55,11 +55,6 @@ data['Breakfast_Score'] = data['Calories'] - data['Fats']
 data['Lunch_Score'] = data['Calories'] + data['Proteins']
 data['Dinner_Score'] = data['Proteins'] - data['Fats']
 
-# Normaliziing the values
-scaler = MinMaxScaler()
-columns_to_scale = ['Breakfast_Score', 'Lunch_Score', 'Dinner_Score']
-data[columns_to_scale] = scaler.fit_transform(data[columns_to_scale])
-
 # ----------------- USER INPUT -----------------
 
 # Get user input for dietary restrictions
