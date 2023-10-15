@@ -7,7 +7,7 @@ from sklearn.preprocessing import MinMaxScaler
 app = Flask(__name__)
 
 # Load pre-trained model
-data = pd.read_csv('input.csv')
+data = pd.read_csv('food_dataset.csv.csv')
 imputer = SimpleImputer(strategy='mean')  # for removing null values
 scaler = MinMaxScaler()
 
