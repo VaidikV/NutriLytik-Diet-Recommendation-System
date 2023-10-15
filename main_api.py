@@ -32,10 +32,6 @@ data['Breakfast_Score'] = data['Calories'] - data['Fats']
 data['Lunch_Score'] = data['Calories'] + data['Proteins']
 data['Dinner_Score'] = data['Proteins'] - data['Fats']
 
-# Normaliziing the values
-columns_to_scale = ['Breakfast_Score', 'Lunch_Score', 'Dinner_Score']
-data[columns_to_scale] = scaler.fit_transform(data[columns_to_scale])
-
 model = GradientBoostingRegressor(n_estimators=300, learning_rate=0.2, max_depth=4, subsample=0.8)
 X = data[['Is_Vegetarian', 'Protein_to_Calories_Ratio', 'Fat_to_Protein_Ratio',
           'Calcium_to_Calories_Ratio', 'Sodium_to_Calories_Ratio', 'Potassium_to_Calories_Ratio',
