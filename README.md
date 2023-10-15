@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - [Overview](#overview)
+- [Screenshots] (#screenshots)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -13,6 +14,9 @@
 ## Overview
 
 Nutri-Lytik is a diet recommendation system designed to help users make healthier food choices based on their dietary preferences and health goals. The system uses machine learning to provide personalized meal recommendations.
+
+## Screenshots
+<img width="864" alt="image" src="https://github.com/VaidikV/NutriLytik-Diet-Recommendation-System/assets/63895478/160df18f-7afb-4788-9e3c-75a7137b6e2c">
 
 ## Features
 
