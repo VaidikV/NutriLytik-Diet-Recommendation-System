@@ -107,7 +107,7 @@ def recommend_meal():
             return jsonify({"recommendations": top_n_recommendations.to_dict()})
 
         else:
-            open_ai_key = os.environ.get(openai_key)
+            open_ai_key = os.environ.get("openai_key")
 
             llm_resto = OpenAI(temperature=0.6, openai_api_key=open_ai_key)
             prompt_template_resto = PromptTemplate(
