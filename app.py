@@ -12,7 +12,6 @@ import re
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 CORS(app)
-bcrypt = Bcrypt(app)
 
 # Load dataset
 data = pd.read_csv('food_dataset.csv')
