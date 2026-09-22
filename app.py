@@ -4,9 +4,8 @@ import pandas as pd
 import joblib
 from sklearn.impute import SimpleImputer
 import os
-from langchain.prompts import PromptTemplate
-from langchain.llms import OpenAI
-from langchain.chains import LLMChain
+from langchain_core.prompts import PromptTemplate
+from langchain_openai import OpenAI
 import re
 
 app = Flask(__name__)
@@ -120,13 +119,13 @@ def recommend_meal():
                          "Person is veg or non veg: {vegetarian_pref}\n"
             )
 
-            chain_resto = LLMChain(llm=llm_resto, prompt=prompt_template_resto)
+            chain_resto = prompt_template_resto | llm_resto
             input_data = {'meal_pref': meal_pref,
                           'vegetarian_pref': vegetarian_pref,
                           'calorie_limit': calorie_limit,
                           'health_goal': health_goal,
                           }
-            results = chain_resto.run(input_data)
+            results = chain_resto.invoke(input_data)
 
             pattern = re.compile(r'\d+\.\s(.+?)\n')
 
